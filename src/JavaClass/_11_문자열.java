@@ -1,8 +1,10 @@
 package JavaClass;
 
+import java.sql.SQLOutput;
+
 public class _11_문자열 {
     public static void main(String[] args) {
-        String a = "I love like Java and kk";
+        String a = "I love like Java and kk.";
 
         System.out.println(a.length()); //문자열 갯수
 
@@ -19,6 +21,24 @@ public class _11_문자열 {
         System.out.println(a.endsWith("kk")); //이 문자열로 끝나면 true 아니면 false
 
 
+        //문자열 전환
+        System.out.println(a.replace(" and", ",")); //"한칸 띄우고 and" 를 ","로 변환
+        System.out.println(a.substring(12)); //인덱스 기준 7부터 시작(이전 내용은 삭제)
+        System.out.println(a.substring(a.indexOf("Java"))); //위에 처럼 해도 되지만 아래처럼 해도 된다.
+        System.out.println(a.substring(a.indexOf("Java"), a.indexOf("."))); //시작 위치부터 끝 위치 "직전까지"
+
+        //공백 제거 하는 방법
+
+        String d = "           I Love Java.       ";
+        System.out.println(d);
+        System.out.println(d.trim());//공백저거
+
+        //문자열 결합
+        String s1 = "java" ;
+        String s2 = "python" ;
+        System.out.println(s1 + s2);
+        System.out.println(s1 + "," +  s2);
+        System.out.println(s1.concat(",").concat(s2)); //concat 사용할 수 있다
 
     }
 }
