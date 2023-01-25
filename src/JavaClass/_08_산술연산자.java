@@ -6,5 +6,6 @@ public class _08_산술연산자 {
         System.out.println(a++);
         System.out.println(a);// 11되야한다
 
+
     }
 }
